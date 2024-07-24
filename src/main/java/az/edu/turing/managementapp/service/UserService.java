@@ -21,6 +21,7 @@ public class UserService {
                 .age(userDto.getAge())
                 .created(LocalDateTime.now())
                 .updated(LocalDateTime.now())
+                .profilePhoto(userDto.getProfilePhoto())
                 .build();
         userRepository.save(user);
     }
@@ -57,7 +58,8 @@ public class UserService {
         return null;
     }
 
-//    public void getCount() {
-//
-//    }
+    public long countUsers() {
+        return userRepository.count();
+    }
+
 }

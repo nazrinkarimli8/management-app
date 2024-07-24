@@ -45,6 +45,9 @@ public class UserController {
         return userService.updateUser(id, user);
     }
 
-    // getCount
+    @GetMapping("/count")
+    public void countProfile() {
+         userService.countUsers();
+    }
 
 }
