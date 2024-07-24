@@ -22,7 +22,7 @@ public class UserController {
 
     @GetMapping("/all")
     public Iterable<User> getAllProfile() {
-       return userService.getAllUser();
+        return userService.getAllUser();
     }
 
     @GetMapping("/{id}")
@@ -46,8 +46,8 @@ public class UserController {
     }
 
     @GetMapping("/count")
-    public void countProfile() {
-         userService.countUsers();
+    public long countProfile() {
+        return userService.countUsers();
     }
 
 }
